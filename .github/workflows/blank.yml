@@ -26,7 +26,7 @@ jobs:
           tar xvf germanium_1.2.2_linux_x86_64.tar.gz
           
       - name: Generate code diff
-        run: ./germanium -o output.png last_commit.patch
+        run: ./germanium -o output.png --no-window-access-bar last_commit.patch
         
       - uses: actions/upload-artifact@v2
         with:
